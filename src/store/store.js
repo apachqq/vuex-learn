@@ -6,16 +6,15 @@ export default createStore({
             counter: 0
         }
     },
-    getters: {
-
-    },
     mutations: {
-
+        increment(state) {
+            state.counter++
+        },
+        add(state, payload) {
+            state.counter += payload.value
+        }
     },
-    actions: {
-
-    },
-    modules: {
-
-    }
+    getters: {},
+    actions: {},
+    modules: {}
 })

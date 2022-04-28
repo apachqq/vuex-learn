@@ -11,7 +11,7 @@
     export default {
         methods: {
             ...mapMutations({
-                addFive: 'add'
+                addFive: 'count/add'
             }),
             add() {
                 this.addFive({
@@ -33,10 +33,10 @@
             }
         },
         computed: {
-            // counter() {
-            //     return this.$store.getters.counter
-            // },
-            ...mapGetters(['counter'])
+            counter() {
+                return this.$store.getters['count/counter']
+            },
+            // ...mapGetters('count', ['counter'])
         }
     }
 </script>

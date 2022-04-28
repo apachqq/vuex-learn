@@ -17,11 +17,12 @@
     export default {
         components: {TheNavbar},
         computed: {
-            ...mapGetters(['counter', 'doubleCounter', 'uppercaseTitle'])
+            ...mapGetters(['uppercaseTitle']),
+            ...mapGetters('count', ['counter', 'doubleCounter'])
         },
         methods: {
-            ...mapMutations({add: 'increment'}),
-            ...mapActions(['incrementAsync'])
+            ...mapMutations({add: 'count/increment'}),
+            ...mapActions('count', ['incrementAsync'])
             // incrementAsync() {
             //     this.$store.dispatch('incrementAsync', {
             //         value: 10,

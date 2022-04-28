@@ -16,7 +16,13 @@ export default createStore({
     },
     getters: {
         counter(state) {
-            return state.counter
+            // if (state.counter > 50) {
+            //     return 0
+            // }
+                return state.counter
+        },
+        doubleCounter(_, getters) {
+            return getters.counter * 2
         }
     },
     actions: {},

@@ -25,6 +25,12 @@ export default createStore({
             return getters.counter * 2
         }
     },
-    actions: {},
+    actions: {
+        incrementAsync(context, payload) {
+            setTimeout(() => {
+                context.commit('add', payload)
+            }, payload.delay)
+        }
+    },
     modules: {}
 })

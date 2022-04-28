@@ -42,4 +42,21 @@
 </script>
 
 <style scoped>
+
+    .navbar {
+        display: flex;
+        padding: 0 2rem;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        z-index: 20;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 56px;
+        background-color: #fff;
+        box-sizing: border-box;
+        border-bottom: 1px solid #eaecef;
+    }
+
 </style>
